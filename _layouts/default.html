@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>{{ page.title }}</title>
+			<!-- link to core stuff -->
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>{{page.title}}</title>
+			<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+			<meta name="author" content="Your name goes here">
+			<meta name="copyright" content="Maybe consider a Creative Commons license">
+			
+			<link rel="stylesheet" href="{{page.root}}/css/foundation.css">
+			<style>pre > code { border: 0 }</style>
+			<link rel="stylesheet" href="{{page.root}}/css/fontawesome.css">
+			<link rel="stylesheet" href="{{page.root}}/css/all.css" rel="stylesheet">
+			<!-- <link rel="stylesheet" href="{{page.root}}/css/regular.css" rel="stylesheet"> -->
+			<!-- <link rel="stylesheet" href="{{page.root}}/css/solid.css" rel="stylesheet"> -->
+
+			<link rel="stylesheet" href="{{page.root}}/css/coderay-asciidoctorweb.css">
+			<link rel="stylesheet" href="{{page.root}}/css/asciidoctor.css">
+			<!-- <link rel="stylesheet" href="{{page.root}}/css/working-css.css"> -->
+			<script src="{{page.root}}/js/vendor/modernizr.js"></script>
+			<script src="{{page.root}}/js/toc.js"></script>
+
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about">About</a></li>
+	        		<li><a href="/resume">Resume</a></li>
+	        		<li><a href="/blog">Blog</a></li>
+					<li><a href="/docs">Documents</a></li>
+	    		</ul>
+			</nav>
+			<!-- /.container -->
+			<div class="container">
+			
+			{{ content }}
+			
+			</div>
+			<footer>
+				<ul>
+					<li><a href="https://dscottgould.github.io/">Website: https://dscottgould.github.io/</a></li>
+					<li><a href="mailto:gould.dscott@gmail.com">eMail: gould.dscott@gmail.com</a></li>
+					<li><a href="https://www.linkedin.com/in/dscottgould/">Linkedin: https://www.linkedin.com/in/dscottgould/</a></li>
+				</ul>
+			</footer>
+
+			<!-- link to other scripts -->
+			<script src="{{page.root}}/js/vendor/jquery.js"></script>
+			<script src="{{page.root}}/js/foundation.min.js"></script>
+			<script>
+				$(document).foundation();
+				var doc = document.documentElement;
+				doc.setAttribute('data-useragent', navigator.userAgent);
+			</script>
+		</body>
+	</html>
