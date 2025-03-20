@@ -57,3 +57,26 @@ layout: default
     image_url: "/images/artgallery/Card02.jpg"
     date: "2025-03-21"
   ---
+
+
+  <h1>{{ page.title }}</h1>
+
+<ul class="documents">
+  <li>Resistance Rangers's Documents</li>
+  {% for entry in site.pdfs %}
+    {% for pdf in entry.entries %}
+      <li>
+        <a href="{{ pdf.url }}" target="_blank" rel="noopener noreferrer">{{ pdf.title }}</a>
+      </li>
+    {% endfor %}
+  {% endfor %}
+
+  <li>ASCIIDoc School</li>
+  {% for doc in site.documents %}
+    <li>
+      <a href="{{ doc.url }}" target="_blank" title="{{ doc.title }}">{{ doc.title }}</a>
+      <br>
+      <span>Date Created: {{ doc.date | date_to_string }}</span>
+    </li>
+  {% endfor %}
+</ul>

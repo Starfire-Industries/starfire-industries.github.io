@@ -2,4 +2,28 @@
 title: "Legend of SilverHeels"
 date: 2025-03-19
 ---
+
+= The Trail of Lost Hopes and Dreams
+:doctype: book
+:showtitle:
+
+The Legend of SilverHeels
+
 This is the tale of SilverHeels, a mysterious and inspiring figure...
+
+  It is 1861, in a town called Buckskin Joe’s in South Park in the Rocky Mountains, there is 
+an unnamed girl who they called Silverheels.  Silverheels was a dancer at the towns dance hall. 
+She was known to be the most beautiful girl in all the land when she took off her veil, this led her 
+to be one of the most famous dancers at Buckskin Joe.  All of the miners fell in love with her. 
+One day two sheepherders came to Buckskin Joe And gave all the miners smallpox.  All the 
+woman and the children fled from town, but not Silverheels. 
+
+  It was said that Silverheels stayed to help the miners because she was thankful for all they 
+did for her.  She stayed and helped the miners until one day she herself got smallpox.  It was said 
+that smallpox melted away her beauty, so she left town not wanting anyone to see her.  One day 
+the miners who she helped wanted to give her a gift, but they found that she was not at her home. 
+The miners still wanted to pay their respects and so they named a mountain after her. 
+
+To be continued ....
+
+image::/images/The Lady of the Lake.jpg[alt="Silver Heels, The Lady of the Lake"]

@@ -1,12 +1,34 @@
 ---
 layout: default
-title: IG Omega's Documents
+title: NPS Resistance Rangers's Documents
 ---
 	<h1>{{ page.title }}</h1>
-	<ul class="documents">
 
-	  {% for doc in site.documents %}
-	    <li><a href="{{ doc.url }}" title="{{ doc.title }}">{{ doc.title }}</a></li>
-		<span>Date Created: {{ doc.date | date_to_string }}</span>
-	  {% endfor %}
-	</ul>
+	<div class="documents">
+		<h2 class="document-header">
+			</i> Resistance Rangers's Manuals&nbsp;&nbsp;<i class="fas fa-folder"></i>
+		</h2>
+		<ul>
+			{% for entry in site.pdfs %}
+			{% for pdf in entry.entries %}
+			  <li>
+				<a href="{{ pdf.pdf_url }}" target="_blank" rel="noopener noreferrer">{{ pdf.title }}&nbsp;&nbsp;<i class="fas fa-file-pdf"></i></a>
+				<span>Date Created: {{ pdf.date | date_to_string }}</span>
+			  </li>
+			{% endfor %}
+		  {% endfor %}
+		</ul>
+
+		<h2 class="document-header">
+			</i>ASCIIDoc School&nbsp;&nbsp;<i class="fas fa-folder"></i>
+		</h2>
+		<ul>
+			{% for doc in site.documents %}
+				<li>
+					<a href="{{ doc.url }}" title="{{ doc.title }}">{{ doc.title }}&nbsp;&nbsp;<i class="fas fa-book"></i></a>
+					<span>Date Created: {{ doc.date | date_to_string }}</span>
+				</li>
+		    {% endfor %}
+		</ul>
+	</div>
+

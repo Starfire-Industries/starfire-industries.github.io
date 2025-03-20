@@ -24,3 +24,6 @@ collections:
   stories:
     output: true # Set to true to generate pages for each story
   artgallery:
+    output: false
+  pdfs:
+    output: false

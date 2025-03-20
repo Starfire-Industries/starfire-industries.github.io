@@ -59,9 +59,65 @@ a:hover {
     gap: 20px;
 }
 
+.art-piece {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centers text below the image */
+}
+
 .art-piece img {
-    width: 100%;
-    height: auto;
+    width: 75%;
+    height: auto; /* Ensures the height adjusts automatically */
+    object-fit: contain; /* Keeps the entire image visible */
     border: 2px solid #ddd;
     border-radius: 10px;
 }
+
+.documents {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .documents li {
+    margin: 10px 0;
+  }
+  
+  .documents li a {
+    text-decoration: none;
+    color: #0078d4;
+    font-weight: bold;
+  }
+  
+  .documents li a:hover {
+    text-decoration: underline;
+    color: #005a9e;
+  }
+  
+  .documents span {
+    display: block;
+    font-size: 0.9em;
+    color: #555;
+  }
+
+  .document-header {
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    font-size: 1.8em; /* Slightly larger than normal text */
+    font-weight: bold; /* Make it stand out */
+    color: #004b97; /* A strong, professional blue */
+    margin-top: 30px; /* Add spacing before the header */
+    margin-bottom: 15px; /* Add spacing after the header */
+    text-align: left; /* Center-align for emphasis */
+    border-bottom: 2px solid #d8d8d8; /* Underline for separation */
+    padding-bottom: 5px; /* Add space between text and underline */
+
+    background: linear-gradient(to right, #004b97, #0078d4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  
