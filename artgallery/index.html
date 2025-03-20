@@ -1,0 +1,47 @@
+---
+layout: default
+title: Art Gallery
+---
+{% for art in site.artgallery %}
+  <p>{{ art.entries }}</p>
+{% endfor %}
+
+{% for art in site.artgallery.entries %}
+  <p>{{ art.title }}</p>
+  <p>{{ art.description }}</p>
+  <p>{{ art.image_url }}</p>
+{% endfor %}
+
+<p>{{ site.artgallery.entries[0] | inspect }}</p>
+
+<p>{{ site.artgallery | inspect }} </p>
+
+{% for entry in site.artgallery %}
+  {% for data in entry.entries %}
+    <div>
+      <h2>{{ data.title }}</h2>
+      <p>{{ data.description }}</p>
+      <img src="{{ data.image_url }}" alt="{{ data.title }}">
+      <p>Date: {{ data.date }}</p>
+    </div>
+  {% endfor %}
+{% endfor %}
+
+
+
+	<div class="art-gallery">
+		{% for art in site.artgallery %}
+			{% if art.entries %}
+		  		{% for entry in art.entries %}
+					<div class="art-piece">
+						<img src="{{ art.image_url }}" alt="{{ art.title }}">
+						<h3>{{ art.title }}</h3>
+						<p>{{ art.description }}</p>
+					</div>
+				{% endfor %}
+			{% else %}
+				<p>No entries found in this file</p>
+			{% endif %}
+		{% endfor %}
+	</div>
+  
