@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NPS Resistance Rangers</title>
+	<meta name="description"
+		content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="author" content="DS Gould">
+	<meta name="copyright" content="Maybe consider a Creative Commons license">
+	<meta name="keywords" content="Conservation, Activism, Public Lands, National Parks, Preservation, Sustainability">
+
+	<link rel="stylesheet" href="/css/foundation.css">
+	<style>
+		pre>code {
+			border: 0
+		}
+	</style>
+	<link rel="stylesheet" href="/css/fontawesome.css">
+	<link rel="stylesheet" href="/css/coderay.css">
+	<link rel="stylesheet" href="/css/asciidoctor.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+	integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+	crossorigin=""/>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+	integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+	crossorigin=""></script>
+	<script src="/js/vendor/modernizr.js"></script>
+	<!-- <script src="/js/toc.js"></script> -->
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/press">Press Releases</a></li>
+			<li><a href="/stories">Stories</a></li>
+			<li><a href="/artgallery">Art Gallery</a></li>
+			<li><a href="/blog">Blog</a></li>
+			<li><a href="/docs/">Library</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<img src="/images/SmokeyTheRebel.png" alt="Smokey The Rebel" width="300" height="300">
+		<div class="blurb">
+			<h1>NPS Resistance Rangers</h1>
+			<p>Community of 800+ off duty park rangers rallying to save public lands.</p>
+		</div><!-- /.blurb -->
+		Public locations for 3/22 Rally :
+	</div><!-- /.container -->
+
+	<div id="map"></div>
+
+
+	<footer>
+		<ul>
+			<li><a href="https://rescuerangers.github.io/">Website: https://rescuerangers.github.io/</a></li>
+			<li><a href="resistanceranger@proton.me">eMail: resistanceranger@proton.me</a></li>
+			<li><a href="https://www.instagram.com/resistancerangers/">Instagram: https://www.instagram.com/resistancerangers/</a></li>
+			<li><a href="https://bsky.app/profile/resistancerangers.bsky.social">BlueSky: https://bsky.app/profile/resistancerangers.bsky.social</a></li>
+		</ul>
+
+		Site Created by Donald Scott Gould.<br />
+		AsciiDoc, MarkDown and HTML Markup Compatible.<br />
+		Powered by Jekyll and Liquid.
+	</footer>
+
+	<!-- link to other scripts -->
+	<script src="/js/vendor/jquery.js"></script>
+	<script src="/js/vendor/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+		var doc = document.documentElement;
+		doc.setAttribute('data-useragent', navigator.userAgent);
+	</script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			// Your map initialization code here
+			loadMapWithProtestLocations();
+		});
+
+		function loadMapWithProtestLocations() {
+			var map = L.map('map').setView([38.889931, -77.009003], 13);
+
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				maxZoom: 19,
+			}).addTo(map);
+
+			L.marker([38.889931, -77.009003]).addTo(map)
+				.bindPopup('NPS Resistance Rangers HQ')
+				.openPopup();
+
+			fetch('/data/protests.json') // Replace with your actual JSON path
+				.then(response => response.json())
+				.then(data => {
+					// Iterate through the features array
+					data.features.forEach(feature => {
+					const coordinates = feature.geometry.coordinates; // Access the coordinates
+					const locationName = feature.properties.Name; // Access the name (optional)
+					
+					// Add markers or logic for your map component here
+					console.log(`Loaded location: ${locationName}, Coordinates: ${coordinates}`);
+
+					var lat = coordinates[1];
+					var lng = coordinates[0];
+					var marker = L.marker([lat, lng]).addTo(map)
+								.bindPopup(`<b>${locationName}</b>`); // Show the name of the location
+
+					var bounds = [];
+
+					data.features.forEach(feature => {
+					const lat = feature.geometry.coordinates[1];
+					const lng = feature.geometry.coordinates[0];
+					bounds.push([lat, lng]);
+					});
+
+					map.fitBounds(bounds); // Adjusts zoom and centers to fit all markers
+
+					});
+				})
+				.catch(error => console.error('Error loading protest locations:', error));
+			}
+	</script>
+</body>
+
+</html>
