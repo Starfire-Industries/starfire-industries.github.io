@@ -1,147 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Starfire Industries</title>
-	<meta name="description"
-		content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-	<meta name="author" content="DS Gould">
-	<meta name="copyright" content="Maybe consider a Creative Commons license">
-	<meta name="keywords" content="Conservation, Activism, Public Lands, National Parks, Preservation, Sustainability">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="RSD 5.1.3567">
+  <title>Index</title>
+  <link rel="stylesheet" href="css/foundation.min.css">
+  <link rel="stylesheet" href="/css/fontawesome.css">
+  <link rel="stylesheet" href="/css/coderay.css">
+  <link rel="stylesheet" href="/css/asciidoctor.css">
+  <link rel="stylesheet" href="/css/lightbox.css">
+  <link rel="stylesheet" href="css/wireframe-theme.min.css">
+  <script>document.createElement( "picture" );</script>
+  <script class="picturefill" async="async" src="js/vendor/"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-	<!-- <style>
-		pre>code {
-			border: 0
-		}
-	</style> -->
 
-	<link rel="stylesheet" href="/css/foundation.css">
-	<link rel="stylesheet" href="/css/fontawesome.css">
-	<link rel="stylesheet" href="/css/coderay.css">
-	<link rel="stylesheet" href="/css/asciidoctor.css">
-	<link rel="stylesheet" href="/css/lightbox.css">
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
-	<link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-	<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-	integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-	crossorigin=""/>
-
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-	integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-	crossorigin=""></script> -->
-
-	<script src="/js/vendor/jquery-3.7.1.js"></script>
-	<script src="/js/vendor/foundation.min.js"></script>
-	<script src="/js/vendor/modernizr.js"></script>
-	<script src="/js/vendor/lightbox.js"></script>
-
-	<!-- <script src="/js/toc.js"></script> -->
+  <script src="/js/vendor/lightbox.js"></script>
 </head>
 
-<body>
-	<nav>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/press">Press Releases</a></li>
-			<li><a href="/stories">Stories</a></li>
-			<li><a href="/artgallery">Art Gallery</a></li>
-			<li><a href="/blog">Blog</a></li>
-			<li><a href="/docs/">Library</a></li>
-		</ul>
-	</nav>
-
-
-	<div class="hero">		
-
-	</div> 
-
-	<div class="companyInfo">
-		<h1>Starfire Industries</h1>
-		<p>AI Enchanced Hosted Platforms.</p>
-	</div>
-
-
-
-	<!-- <div id="map"></div> -->
-
-
-	<footer>
-		<hr class="footer-divider">
-		<ul class="contact">
-			<li><a href="https://starfire-industries.github.io/">Website: https://starfire-industries.github.io/</a></li>
-			<li><a href="https://www.linkedin.com/in/dscottgould/">Linkedin: https://www.linkedin.com/in/dscottgould/</a></li>
-			<li><a href="gould.dscott@gmail.com">eMail: gould.dscott@gmail.com</a></li>
-		<!--
-			<li><a href="https://www.instagram.com/resistancerangers/">Instagram: https://www.instagram.com/resistancerangers/</a></li>
-			<li><a href="https://bsky.app/profile/resistancerangers.bsky.social">BlueSky: https://bsky.app/profile/resistancerangers.bsky.social</a></li>
-		 -->
-		</ul>
-
-		<div class="signature">
-			Site Created by Donald Scott Gould.<br />
-			AsciiDoc, MarkDown and HTML Markup Compatible.<br />
-			Powered by Jekyll and Liquid.
-		</div>
-	</footer>
-
-	<!-- link to other scripts -->
-	<script>
-		$(document).foundation();
-		var doc = document.documentElement;
-		doc.setAttribute('data-useragent', navigator.userAgent);
-	</script>
-
-	<!-- <script>
-		document.addEventListener('DOMContentLoaded', function () {
-			// Your map initialization code here
-			loadMapWithProtestLocations();
-		});
-
-		function loadMapWithProtestLocations() {
-			var map = L.map('map').setView([38.889931, -77.009003], 13);
-
-			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-				maxZoom: 19,
-			}).addTo(map);
-
-			L.marker([38.889931, -77.009003]).addTo(map)
-				.bindPopup('NPS Resistance Rangers HQ')
-				.openPopup();
-
-			fetch('/data/protests.json') // Replace with your actual JSON path
-				.then(response => response.json())
-				.then(data => {
-					// Iterate through the features array
-					data.features.forEach(feature => {
-					const coordinates = feature.geometry.coordinates; // Access the coordinates
-					const locationName = feature.properties.Name; // Access the name (optional)
-					
-					// Add markers or logic for your map component here
-					console.log(`Loaded location: ${locationName}, Coordinates: ${coordinates}`);
-
-					var lat = coordinates[1];
-					var lng = coordinates[0];
-					var marker = L.marker([lat, lng]).addTo(map)
-								.bindPopup(`<b>${locationName}</b>`); // Show the name of the location
-
-					var bounds = [];
-
-					data.features.forEach(feature => {
-					const lat = feature.geometry.coordinates[1];
-					const lng = feature.geometry.coordinates[0];
-					bounds.push([lat, lng]);
-					});
-
-					map.fitBounds(bounds); // Adjusts zoom and centers to fit all markers
-
-					});
-				})
-				.catch(error => console.error('Error loading protest locations:', error));
-			}
-	</script> -->
+<body class="no-js">
+  <div class="container mainNavigation">
+    <div class="container button mobile-menu-toggle" data-toggle="view-menu">
+      <div class="rule menu-line">
+        <hr>
+      </div>
+      <div class="rule menu-line">
+        <hr>
+      </div>
+      <div class="rule menu-line">
+        <hr>
+      </div>
+    </div>
+    <div class="container menu-wrapper" data-toggler="show-menu" id="view-menu"><a href="index.html" class="responsive-picture nav-logo">
+        <picture>
+          <img alt="Placeholder Picture" width="93" height="150" src="./images/KT-LOGO.png">
+        </picture>
+      </a><ul class="list-container menu"><li class="list-item-container nav-wrapper">
+          <a class="link-text nav-item" href="index.html" data-toggle="view-menu">Home</a>
+        </li><li class="list-item-container nav-wrapper">
+          <a class="link-text nav-item" href="/artgallery/index.html" data-toggle="view-menu">Art Gallery</a>
+        </li><li class="list-item-container nav-wrapper">
+			<a class="link-text nav-item" href="/stories" data-toggle="view-menu">Stories</a>
+		  </li><li class="list-item-container nav-wrapper">
+          <a class="link-text nav-item" href="/artgallery/index.html" data-toggle="view-menu">Products</a>
+        </li><li class="list-item-container nav-wrapper">
+          <a class="link-text nav-item" href="index.html#featured-projects" data-toggle="view-menu">Projects</a>
+        </li><li class="list-item-container nav-wrapper">
+          <a class="link-text nav-item" href="/docs/" data-toggle="view-menu">Library</a>
+        </li><li class="list-item-container nav-wrapper">
+          <a class="link-text nav-item" href="/artgallery/contact.html" data-toggle="view-menu">About</a>
+        </li></ul></div>
+  </div>
+  <div class="container mainBodyContainer" id="MainBody">
+    <div class="container bodyLeftSide">
+      <div class="container mainSection">
+        <h2 class="helloText">Hello,<br></h2>
+        <h1 class="mainText">I'm Kiro<br>of Starfire Industries.</h1>
+        <p class="paragraph paragraph-2">GenAI Enchanced Hosted Platforms.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container contactInfo">
+    <div class="container contactText">
+      <a class="link-text text-link-1" href="#">Website: https://starfire-industries.github.io/<br></a>
+      <a class="link-text text-link-3" href="#">LinkedIn: https://www.linkedin.com/in/dscottgould/</a>
+    </div>
+    <a class="link-text text-link-2" href="#">eMail: gould.dscott@gmail.com<br></a>
+  </div>
+  <div class="container surrounding-padding-col-low footer-copyright">
+    <div class="container copyrightText">
+      <p class="paragraph footer-copyright-text">Site Created by Donald Scott Gould.<br>AsciiDoc, MarkDown and HTML Markup Compatible.<br>Powered by Jekyll and Liquid. </p>
+    </div>
+  </div>
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/outofview.js"></script>
+  <script src="js/vendor/what-input.min.js"></script>
+  <script src="js/vendor/foundation.min.js"></script>
+  <script>$(document).foundation();</script>
+<!-- SMOOTH SCROLL -->
+<script>
+$(function() {
+  $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+<!-- End of SMOOTH SCROLL -->
 </body>
 
 </html>
