@@ -30,7 +30,6 @@ h1.mainText {
 }
 
 h2 {
-  margin-bottom: 1.5rem;
   margin-left: 0;
   color: #fff;
   font-weight: 500;
@@ -46,7 +45,6 @@ h2.centered {
 
 h2.helloText {
   margin-bottom: 0;
-  max-width: 0;
   color: #fff;
   text-transform: capitalize;
   font-size: 28px;
