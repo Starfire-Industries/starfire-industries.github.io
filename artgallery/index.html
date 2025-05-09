@@ -5,11 +5,13 @@ title: Art Gallery
 
 
 {% for entry in site.artgallery %}
-  {% for data in entry.entries %}
-  	<div class="art-piece">
-      <img src="{{ data.image_url }}" alt="{{ data.title }}">
-	  <h3>{{ art.title }}</h3>
-      <p>{{ data.description }}</p>
-    </div>
-  {% endfor %}
+<div class="defaultArtgalleryBody"></div>
+{% for data in entry.entries %}
+  <div class="artWork">
+    <img src="{{ data.image_url }}" alt="{{ data.title }}">
+    <h3>{{ art.title }}</h3>
+    <p>{{ data.description }}</p>
+  </div>
+{% endfor %}
+</div>
 {% endfor %}

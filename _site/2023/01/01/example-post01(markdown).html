@@ -11,7 +11,7 @@
 			<meta name="copyright" content="Maybe consider a Creative Commons license">
 			
 			<link rel="stylesheet" href="/css/foundation.css">
-			<style>pre > code { border: 0 }</style>
+
 			<link rel="stylesheet" href="/css/fontawesome.css">
 			<link rel="stylesheet" href="/css/all.css" rel="stylesheet">
 			<!-- <link rel="stylesheet" href="/css/regular.css" rel="stylesheet"> -->
@@ -20,26 +20,57 @@
 			<link rel="stylesheet" href="/css/coderay-asciidoctorweb.css">
 			<link rel="stylesheet" href="/css/asciidoctor.css">
 			<!-- <link rel="stylesheet" href="/css/working-css.css"> -->
-			<script src="/js/vendor/modernizr.js"></script>
 			<!-- <script src="/js/toc.js"></script> -->
 
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 		</head>
 		<body>
-			<nav>
-				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/press">Press Releases</a></li>
-					<li><a href="/stories">Stories</a></li>
-					<li><a href="/artgallery">Art Gallery</a></li>
-					<li><a href="/blog">Blog</a></li>
-					<li><a href="/docs/">Library</a></li>
-				</ul>
-			</nav>
-			<!-- /.container -->
-			<div class="container">
-			
+			<div class="container mainNavigation">
+				<div class="container button mobile-menu-toggle" data-toggle="view-menu">
+					<div class="rule menu-line">
+						<hr>
+					</div>
+					<div class="rule menu-line">
+						<hr>
+					</div>
+					<div class="rule menu-line">
+						<hr>
+					</div>
+				</div>
+				<div class="container menu-wrapper" data-toggler="show-menu" id="view-menu">
+					<a href="index.html" class="responsive-picture nav-logo">
+						<img alt="Starfire Industried Logo" src="/images/StarfireLogo.png">
+					</a>
+					<ul class="list-container menu">
+						<li class="list-item-container nav-wrapper">
+							<a class="link-text nav-item" href="index.html" data-toggle="view-menu">Home</a>
+						</li>
+						<li class="list-item-container nav-wrapper">
+							<a class="link-text nav-item" href="/artgallery/index.html" data-toggle="view-menu">Art Gallery</a>
+						</li>
+						<li class="list-item-container nav-wrapper">
+							<a class="link-text nav-item" href="/stories" data-toggle="view-menu">Stories</a>
+						</li>
+						<li class="list-item-container nav-wrapper">
+							<a class="link-text nav-item" href="/artgallery/index.html" data-toggle="view-menu">Products</a>
+						</li>
+						<li class="list-item-container nav-wrapper">
+							<a class="link-text nav-item" href="index.html#featured-projects"
+								data-toggle="view-menu">Projects</a>
+						</li>
+						<li class="list-item-container nav-wrapper">
+							<a class="link-text nav-item" href="/docs/" data-toggle="view-menu">Library</a>
+						</li>
+						<li class="list-item-container nav-wrapper">
+							<a class="link-text nav-item" href="/artgallery/contact.html" data-toggle="view-menu">About</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+			<!-- content -->			
 			<h1>Example Post 01</h1>
 <p class="meta">Posted: 01 Jan 2023</p>
 
@@ -58,27 +89,44 @@
 </div>
 
 			
-			</div>
-			<footer>
-				<ul>
-					<li><a href="https://rescuerangers.github.io/">Website: https://rescuerangers.github.io/</a></li>
-					<li><a href="resistanceranger@proton.me">eMail: resistanceranger@proton.me</a></li>
-					<li><a href="https://www.instagram.com/resistancerangers/">Instagram: https://www.instagram.com/resistancerangers/</a></li>
-					<li><a href="https://bsky.app/profile/resistancerangers.bsky.social">BlueSky: https://bsky.app/profile/resistancerangers.bsky.social</a></li>
-				</ul>
-		
-				Site Created by Donald Scott Gould.<br />
-				AsciiDoc, MarkDown and HTML Markup Compatible.<br />
-				Powered by Jekyll and Liquid.
-			</footer>
 
-			<!-- link to other scripts -->
-			<script src="/js/vendor/jquery.js"></script>
-			<script src="/js/foundation.min.js"></script>
+			<div class="container contactInfo">
+				<div class="container contactText">
+					<a class="link-text text-link-1" href="#">Website: https://starfire-industries.github.io/<br></a>
+					<a class="link-text text-link-3" href="#">LinkedIn: https://www.linkedin.com/in/dscottgould/</a>
+				</div>
+				<a class="link-text text-link-2" href="#">eMail: gould.dscott@gmail.com<br></a>
+			</div>
+			<div class="container surrounding-padding-col-low footer-copyright">
+				<div class="container copyrightText">
+					<p class="paragraph footer-copyright-text">Site Created by Donald Scott Gould.<br>AsciiDoc, MarkDown and
+						HTML Markup Compatible.<br>Powered by Jekyll and Liquid. </p>
+				</div>
+			</div>
+			<script src="/js/vendor/jquery.min.js"></script>
+			<script src="/js/vendor/outofview.js"></script>
+			<script src="/js/vendor/what-input.min.js"></script>
+			<script src="/js/vendor/foundation.min.js"></script>
+			<script src="/js/vendor/modernizr.js"></script>
+			<script src="/js/vendor/lightbox.js"></script>
+			<script>$(document).foundation();</script>
+			<!-- SMOOTH SCROLL -->
 			<script>
-				$(document).foundation();
-				var doc = document.documentElement;
-				doc.setAttribute('data-useragent', navigator.userAgent);
-			</script> 
+				$(function () {
+					$('a.smooth-scroll[href*="#"]:not([href="#"])').click(function () {
+						if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+							var target = $(this.hash);
+							target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+							if (target.length) {
+								$('html,body').animate({
+									scrollTop: target.offset().top
+								}, 1000);
+								return false;
+							}
+						}
+					});
+				});
+			</script>
+			<!-- End of SMOOTH SCROLL -->
 		</body>
 	</html>

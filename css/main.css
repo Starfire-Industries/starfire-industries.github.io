@@ -23,7 +23,7 @@ h1 {
   line-height: 1.2;
 }
 
-h1.mainText {
+.mainText {
   color: #fff;
   font-size: 32px;
   font-family: 'Archivo', sans-serif;
@@ -43,7 +43,7 @@ h2.centered {
   text-align: center;
 }
 
-h2.helloText {
+.helloText {
   margin-bottom: 0;
   color: #fff;
   text-transform: capitalize;
@@ -756,7 +756,7 @@ body.project-body {
 
 .container.mainNavigation {
   max-width: none;
-  background-color: #15161a;
+  background-color: #141519;
 }
 
 .container.bodyLeftSide {
@@ -969,7 +969,7 @@ a.social-image.lets-talk-social-icon:hover {
     font-size: 26px;
   }
 
-  h1.mainText {
+  .mainText {
     font-size: 45px;
   }
 
@@ -994,7 +994,7 @@ a.social-image.lets-talk-social-icon:hover {
     font-size: 28px;
   }
 
-  h1.mainText {
+  .mainText {
     font-size: 50px;
   }
 
@@ -1167,9 +1167,9 @@ a.social-image.lets-talk-social-icon:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     -ms-flex-align: end;
-    margin-left: 4rem;
     min-height: 0;
     width: 50%;
+    margin-left: 30px;
 
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
@@ -1213,7 +1213,7 @@ a.social-image.lets-talk-social-icon:hover {
     margin-right: 20px;
     margin-bottom: 0;
     margin-left: 20px;
-    max-width: 30px;
+    margin-top: 15px;
   }
 }
 
@@ -1297,7 +1297,7 @@ a.social-image.lets-talk-social-icon:hover {
     margin-top: 0vh;
     padding-top: 8vw;
     padding-bottom: 8vw;
-    background-color: #fff;
+    background-color: #000000;
   }
 
   .container.surrounding-padding-col-low {
@@ -1341,4 +1341,32 @@ a.social-image.lets-talk-social-icon:hover {
         -ms-flex: 0 20;
             flex: 0 20;
   }
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Roboto', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.defaultArtgalleryBody {
+  display: block;
+  background: #000000 !important;
+  color: #ffffff !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.artWork {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 20px 20px 20px 20px;
+  background: #000000 !important;
+  image-orientation: center;
+  border-radius: 8px;
 }

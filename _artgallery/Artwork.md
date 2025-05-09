@@ -1,9 +1,9 @@
 ---
 title: Artwork Collection
 entries:
-  - title: "Buffalo Apple Pie"
-    description: "Calling all public lands loving bakers! Show your support this Pi Day (Friday 3.14) in the form of Ranger Resistance pies 🥧!"
-    image_url: "/images/artgallery/ApplePie.jpg"
+  - title: "The Gift"
+    description: ""
+    image_url: "/images/artgallery/TheGift.jpg"
     date: "2025-03-19"
   - title: "Rocky Mountain Scones"
     description: "Enjoy these golden treats inspired by the rugged charm of Colorado's Rockies!"
