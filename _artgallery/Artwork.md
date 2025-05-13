@@ -30,7 +30,7 @@ entries:
     image_url: "/images/artgallery/00330-4068716746.png"
     date: "2025-03-21"
   - title: "The Engineer's Creation"
-    description: "A face only a mother could love ...."
+    description: "Only a face only a mother could love ...."
     image_url: "/images/artgallery/00066-882105811.png"
     date: "2025-03-21"
   - title: "The Legend of Kali"
