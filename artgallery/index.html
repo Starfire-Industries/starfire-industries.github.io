@@ -8,8 +8,8 @@ title: Art Gallery
 <div class="defaultArtgalleryBody"></div>
 {% for data in entry.entries %}
   <div class="artWork">
+    <h2>{{ data.title }}</h2>
     <img src="{{ data.image_url }}" alt="{{ data.title }}">
-    <h3>{{ art.title }}</h3>
     <p>{{ data.description }}</p>
   </div>
 {% endfor %}
