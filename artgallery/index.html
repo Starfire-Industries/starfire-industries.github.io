@@ -4,14 +4,47 @@ title: Art Gallery
 ---
 
 
-{% for entry in site.artgallery %}
-<div class="defaultArtgalleryBody"></div>
+<!-- {% for entry in site.artgallery %}
+<div id="artGallery" class="artGallery"></div>
 {% for data in entry.entries %}
   <div class="artWork">
-    <h2>{{ data.title }}</h2>
+    <h2>{{ data.title }}</h2>s
     <img src="{{ data.image_url }}" alt="{{ data.title }}">
     <p>{{ data.description }}</p>
   </div>
+{% endfor %} 
+</div>
+{% endfor %} 
+
+data-lightbox="gallery" data-title="{{ data.title }}" data-description="{{ data.description }}"
+
+-->
+
+<!-- <div id="artGalleryBody" class="artGalleryBody">
+{% for entry in site.artgallery %}
+<div id="artGallery" class="artGallery">
+{% for data in entry.entries %}
+  <a href="{{ data.image_url }}" data-lightbox="gallery" data-title="{{ data.title }}" data-description="{{ data.description }}">
+    <img src="{{ data.image_url }}" alt="{{ data.title }}">
+  </a>
 {% endfor %}
 </div>
 {% endfor %}
+</div> -->
+
+
+<div id="artGalleryBody" class="artGalleryBody">
+{% for entry in site.artgallery %}
+  <div id="artGallery" class="artGallery">
+    {% for data in entry.entries %}
+      <div class="artworkDisplay">  <!-- New wrapper -->
+        <div class="artworkTitle"> {{ data.title }} </div> <!-- Static title -->
+        <a href="{{ data.image_url }}" data-lightbox="gallery" data-title="{{ data.title }}">
+          <img src="{{ data.image_url }}" alt="{{ data.title }}">
+        </a>
+        <div class="overlay"> {{ data.description }} </div> <!-- Hover overlay -->
+      </div>
+    {% endfor %}
+  </div>
+{% endfor %}
+</div>

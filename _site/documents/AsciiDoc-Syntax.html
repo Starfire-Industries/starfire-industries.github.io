@@ -24,6 +24,9 @@
 
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<link rel="stylesheet" href="/css/lightbox.css" />
+			<link type="text/css" rel="stylesheet" href="/css/lightgallery-bundle.css" />
+			<!-- <link rel="stylesheet" href="/css/justifiedGallery.min.css" /> -->
 		</head>
 		<body>
 			<div class="container mainNavigation">
@@ -643,6 +646,12 @@ Your browser does not support the video tag.
 			<script src="/js/vendor/foundation.min.js"></script>
 			<script src="/js/vendor/modernizr.js"></script>
 			<script src="/js/vendor/lightbox.js"></script>
+			<script src="/js/vendor/lightgallery.min.js"></script>
+			<script src="/js/vendor/lg-thumbnail.min.js"></script>
+			<script src="/js/vendor/lg-zoom.min.js"></script>
+
+			<!-- <script src="/js/vendor/jquery.justifiedGallery.min.js"></script> -->
+
 			<script>$(document).foundation();</script>
 			<!-- SMOOTH SCROLL -->
 			<script>
@@ -660,6 +669,18 @@ Your browser does not support the video tag.
 						}
 					});
 				});
+
+				// lightGallery(document.getElementById('artGalleryBody'), {
+        		// 	plugins: [lgZoom, lgThumbnail],
+        		// 	licenseKey: 'your_license_key',
+        		// 	speed: 500,
+        		// 	thumbnail: true,
+				// 	zoom: true,
+    			// });
+
+				// $("#artGalleryBody").justifiedGallery();
+
+				console.log("Gallery initialized");
 			</script>
 			<!-- End of SMOOTH SCROLL -->
 		</body>
