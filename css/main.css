@@ -1486,10 +1486,10 @@ h2 font.productText {
   -ms-flex-align: center;
   min-height: 40vh;
   background-color: #15161a;
-    background-image: url('../images/Code.jpg'), -webkit-linear-gradient(right, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), -webkit-linear-gradient(left, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
-    background-image: url('../images/Code.jpg'), -moz-linear-gradient(right, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), -moz-linear-gradient(left, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
-    background-image: url('../images/Code.jpg'), -o-linear-gradient(right, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), -o-linear-gradient(left, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
-    background-image: url('../images/Code.jpg'), linear-gradient(-90deg, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), linear-gradient(90deg, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
+    background-image: url('../images/Jekyll.png'), -webkit-linear-gradient(right, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), -webkit-linear-gradient(left, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
+    background-image: url('../images/Jekyll.png'), -moz-linear-gradient(right, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), -moz-linear-gradient(left, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
+    background-image: url('../images/Jekyll.png'), -o-linear-gradient(right, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), -o-linear-gradient(left, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
+    background-image: url('../images/Jekyll.png'), linear-gradient(-90deg, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), linear-gradient(90deg, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
     background-attachment: scroll, scroll, scroll;
   background-position: left top, left top, left top;
   background-clip: border-box, border-box, border-box;
@@ -1532,58 +1532,29 @@ h2 font.productText {
 }
 
 .productMerchandise {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display:    -moz-box;
-  display: -ms-flexbox;
-  display:         flex;
-  -ms-flex-align: center;
-  min-height: 40vh;
-  background-color: #15161a;
-  background-image: url('../images/Merchandise.jpg'), -webkit-linear-gradient(right, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), -webkit-linear-gradient(left, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
-  background-image: url('../images/Merchandise.jpg'), -moz-linear-gradient(right, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), -moz-linear-gradient(left, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
-  background-image: url('../images/Merchandise.jpg'), -o-linear-gradient(right, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), -o-linear-gradient(left, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
-  background-image: url('../images/Merchandise.jpg'), linear-gradient(-90deg, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), linear-gradient(90deg, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
-  background-attachment: scroll, scroll, scroll;
-  background-position: left top, left top, left top;
-  background-clip: border-box, border-box, border-box;
-  background-origin: padding-box, padding-box, padding-box;
-  background-size: auto auto, auto auto, auto auto;
-  background-repeat: repeat, no-repeat, no-repeat;
-
-  background-blend-mode: normal, multiply, multiply;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-          align-items: center;
+    display: flex;
+    align-items: center;
+    min-height: 40vh;
+    background-color: #15161a;
+    background-image: url('../images/Cheerleader02.png');
+    background-size: cover; /* Ensures full coverage */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-position: top; /* Centers the image */
+    min-height: 60vh; /* Adjust if needed for better scaling */
 }
 
 .productCover {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display:    -moz-box;
-  display: -ms-flexbox;
-  display:         flex;
-  -ms-flex-align: center;
-  min-height: 40vh;
-  background-color: #15161a;
-  background-image: url('../images/Covers.jpg'), -webkit-linear-gradient(right, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), -webkit-linear-gradient(left, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
-  background-image: url('../images/Covers.jpg'), -moz-linear-gradient(right, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), -moz-linear-gradient(left, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
-  background-image: url('../images/Covers.jpg'), -o-linear-gradient(right, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), -o-linear-gradient(left, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
-  background-image: url('../images/Covers.jpg'), linear-gradient(-90deg, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%), linear-gradient(90deg, rgba(21, 22, 26, .66) 0%, rgba(29, 30, 33, 0) 30%);
-  background-attachment: scroll, scroll, scroll;
-  background-position: left top, left top, left top;
-  background-clip: border-box, border-box, border-box;
-  background-origin: padding-box, padding-box, padding-box;
-  background-size: auto auto, auto auto, auto auto;
-  background-repeat: repeat, no-repeat, no-repeat;
-
-  background-blend-mode: normal, multiply, multiply;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-          align-items: center;
+    display: flex;
+    align-items: center;
+    min-height: 40vh;
+    background-color: #15161a;
+    background-image: url('../images/AlbumCover.png');
+    background-size: cover; /* Ensures full coverage */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-position: top; /* Centers the image */
+    min-height: 75vh; /* Adjust if needed for better scaling */
 }
+
 
 .productDesign {
   display: -webkit-box;
