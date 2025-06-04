@@ -1,7 +1,10 @@
-title: Jekyll AsciiDoc Quickstart
+title: Atlas Jekyll Template  
+description: The Atlas Jekyll Template is a leg-up in starting your own website hosted on GitHub with content based in AsciiDoc.
+plugins:
+  - jekyll-paginate
+  - jekyll-asciidoc
 # uncomment baseurl if you want to publish the site to a subfolder
 #baseurl: /blog
-description: The Jekyll AsciiDoc Quickstart project is a leg-up in starting your own website hosted on GitHub with content based in AsciiDoc.
 exclude:
 - LICENSE
 - README.adoc
@@ -24,8 +27,12 @@ collections:
   stories:
     output: true # Set to true to generate pages for each story
   artgallery:
-    output: false
+    output: true
   pdfs:
     output: false
+
+paginate: 10  # Number of items per page
+paginate_path: "/artgallery/page:num/"
+
 
   
