@@ -4,18 +4,137 @@ title: Art Gallery
 ---
 
 
-<div id="artGalleryBody" class="artGalleryBody">
-{% for entry in site.artgallery %}
-  <div id="artGallery" class="artGallery">
-    {% for data in entry.entries %}
-      <div class="artworkDisplay">  <!-- New wrapper -->
-        <div class="artworkTitle"> {{ data.title }} </div> <!-- Static title -->
-        <a href="{{ data.image_url }}" data-lightbox="gallery" data-title="{{ data.title }}">
-          <img src="{{ data.image_url }}" alt="{{ data.title }}">
-        </a>
-        <div class="artworkOverlay"> {{ data.description }} </div> <!-- Hover overlay -->
-      </div>
-    {% endfor %}
+<div id="artGallery" class="artGalleryBody">
+  <div id='artGalleryPage' class="artGalleryPage">
+    <!-- JavaScript will populate artwork entries here -->
   </div>
-{% endfor %}
 </div>
+
+<!-- Pagination controls -->
+<div class="paginationControl">
+  <button id="prevButton" class="navPrevious">
+    <img src="../images/Previous.bmp" alt="Previous">
+  </button>
+
+  <button id="nextButton" class="navNext">
+    <img src="../images/Next.bmp" alt="Next">
+  </button>
+</div>
+
+<div id="pageIndicator" class="pageStatus"></div>
+
+
+
+
+Debug:<br/>
+
+---- site.artgallery ----
+{% for entry in site.artgallery %}
+  <p>{{ entry | inspect }}</p>
+{% endfor %}
+
+---------------------------------- <br />
+---------------------------------- <br />
+Artworks Object: <br />
+
+{% assign artworks = site.artgallery %}
+{% for artwork in artworks %}
+  {% if artwork.entries %}
+    {% for data in artwork.entries %}
+    <p>Title: {{ data.title }}</p>
+    <p>Date: {{ data.date }}</p>
+    <p>Description: {{ data.description }}</p>
+    <p>Image URL: {{ data.image_url }}</p>
+  {% endfor %}
+  {% else %}
+    <p>No artworks found.</p>
+  {% endif %}
+{% endfor %}
+
+---------------------------------- <br />
+---------------------------------- <br />
+
+<script>
+    const artworkData = {{ site.artgallery | jsonify }};
+</script>
+
+
+
+<!-- <script>
+const artworkData = {{ site.artgallery | jsonify }};
+const gallery = document.getElementById("art-gallery");
+
+artworkData.forEach(art => {
+  if (art.entries && art.entries.length > 0) {
+    art.entries.forEach(entry => {
+      const artDiv = document.createElement("div");
+      artDiv.classList.add("art-item");
+
+      artDiv.innerHTML = `
+        <h2>${entry.title}</h2>
+        <img src="${entry.image_url}" alt="${entry.title}" />
+        <p>${entry.description}</p>
+      `;
+
+      gallery.appendChild(artDiv);
+    });
+  } else {
+    console.warn("No entries found for:", art.title);
+  }
+});
+</script> -->
+
+<!-- <script>
+  const artworkData = {{ site.artgallery | jsonify }};
+  const gallery = document.getElementById("art-gallery");
+
+artworkData.forEach(art => {
+  if (art.entries && art.entries.length > 0) {
+    art.entries.forEach(entry => {
+      const artDiv = document.createElement("div");
+      artDiv.classList.add("artworkDisplay"); // Ensure correct styling
+
+      artDiv.innerHTML = `
+        <div class="artworkTitle">${entry.title}</div>
+        <a href="${entry.image_url}" data-lightbox="gallery" data-title="${entry.title}">
+          <img src="${entry.image_url}" alt="${entry.title}">
+        </a>
+        <div class="artworkOverlay">${entry.description}</div>
+      `;
+
+      gallery.appendChild(artDiv);
+    });
+  } else {
+    console.warn("No entries found for:", art.title);
+  }
+});
+  // Debugging output
+  console.log("Artwork data loaded:", artworkData);
+  console.log("Gallery element:", gallery);
+</script> -->
+
+
+
+
+<!-- <script>
+  const artworkData = {{ site.artgallery | jsonify }};
+  console.log(artworkData);
+
+  let item = document.getElementById("art-item");
+  console.log(item.dataset.title); // Pulls Liquid data into JS
+
+const gallery = document.getElementById("art-gallery");
+
+artworkData.forEach(art => {
+  const artDiv = document.createElement("div");
+  artDiv.classList.add("art-item");
+
+  artDiv.innerHTML = `
+    <h2>${art.title}</h2>
+    <img src="${art.image_url}" alt="${art.title}" />
+    <p>${art.description}</p>
+  `;
+
+  gallery.appendChild(artDiv);
+});
+</script> -->

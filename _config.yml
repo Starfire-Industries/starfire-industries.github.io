@@ -27,12 +27,20 @@ collections:
   stories:
     output: true # Set to true to generate pages for each story
   artgallery:
-    output: true
+    output: false
+    # permalink: "/artgallery/:title/"
+    # paginate: 5  # Number of items per page
+    # paginate_path: "/artgallery/page:num/"
+    # paginate_path: "/artgallery/page:num/"
   pdfs:
     output: false
+# defaults:
+#   - scope:
+#       path: "_artgallery"
+#     values:
+#       paginate: 5
+#       paginate_path: "/artgallery/page:num/"
 
-paginate: 10  # Number of items per page
-paginate_path: "/artgallery/page:num/"
 
 
   
