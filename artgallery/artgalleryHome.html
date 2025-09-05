@@ -1,0 +1,13 @@
+---
+layout: default
+title: Art Gallery
+---
+
+{% for gallery in site.data.artgallery %}
+  <div class="gallery-card">
+    <img src="/images/{{ gallery.folder }}/{{ gallery.cover_image }}" alt="{{ gallery.title }}">
+    <h2>{{ gallery.title }}</h2>
+    <p>{{ gallery.description }}</p>
+    <a href="/artgallery/{{ gallery.page }}">View Gallery</a>
+  </div>
+{% endfor %}

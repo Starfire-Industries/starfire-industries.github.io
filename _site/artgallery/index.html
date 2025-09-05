@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<title>Art Gallery</title>
-			<!-- link to core stuff -->
 			<meta charset="utf-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>Art Gallery</title>
@@ -29,53 +27,56 @@
 			<!-- <link rel="stylesheet" href="/css/justifiedGallery.min.css" /> -->
 		</head>
 		<body>
-			<div class="container mainNavigation">
-				<div class="container button mobile-menu-toggle" data-toggle="view-menu">
-					<div class="rule menu-line">
-						<hr>
-					</div>
-					<div class="rule menu-line">
-						<hr>
-					</div>
-					<div class="rule menu-line">
-						<hr>
-					</div>
-				</div>
-				<div class="container menu-wrapper" data-toggler="show-menu" id="view-menu">
-					<a href="index.html" class="responsive-picture nav-logo">
-						<img alt="Starfire Industried Logo" src="/images/StarfireLogo.png">
-					</a>
-					<ul class="list-container menu">
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/index.html" data-toggle="view-menu">Home</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/artgallery/index.html" data-toggle="view-menu">Art Gallery</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/stories" data-toggle="view-menu">Stories</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/artgallery/index.html" data-toggle="view-menu">Products</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/comingsoon" data-toggle="view-menu">Services</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/comingsoon" data-toggle="view-menu">Projects</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/docs/" data-toggle="view-menu">Library</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/comingsoon" data-toggle="view-menu">About</a>
-						</li>
-					</ul>
-				</div>
+			
+			
+
+<div class="container mainNavigation">
+		<div class="container button mobile-menu-toggle" data-toggle="view-menu">
+			<div class="rule menu-line">
+				<hr>
 			</div>
+			<div class="rule menu-line">
+				<hr>
+			</div>
+			<div class="rule menu-line">
+				<hr>
+			</div>
+		</div>
+		<div class="container menu-wrapper" data-toggler="show-menu" id="view-menu">
+			<a href="index.html" class="responsive-picture nav-logo">
+				<img alt="Starfire Industried Logo" src="/images/StarfireLogo.png">
+			</a>
+			<ul class="list-container menu">
+				<li class="list-item-container nav-wrapper">
+					<a class="link-text nav-item" href="/index.html" data-toggle="view-menu">Home</a>
+				</li>
+				<li class="list-item-container nav-wrapper">
+					<a class="link-text nav-item" href="/artgallery/artgalleryHome.html" data-toggle="view-menu">Art Gallery</a>
+				</li>
+				<li class="list-item-container nav-wrapper">
+					<a class="link-text nav-item" href="/stories" data-toggle="view-menu">Stories</a>
+				</li>
+				<li class="list-item-container nav-wrapper">
+					<a class="link-text nav-item" href="/products/index.html" data-toggle="view-menu">Products</a>
+				</li>
+				<li class="list-item-container nav-wrapper">
+					<a class="link-text nav-item" href="/comingsoon" data-toggle="view-menu">Services</a>
+				</li>
+				<li class="list-item-container nav-wrapper">
+					<a class="link-text nav-item" href="/comingsoon" data-toggle="view-menu">Projects</a>
+				</li>
+				<li class="list-item-container nav-wrapper">
+					<a class="link-text nav-item" href="/docs/" data-toggle="view-menu">Library</a>
+				</li>
+				<li class="list-item-container nav-wrapper">
+					<a class="link-text nav-item" href="/comingsoon" data-toggle="view-menu">About</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
 
-
-			<!-- content -->			
+			
 			<div id="artGallery" class="artGalleryBody">
   <div id='artGalleryPage' class="artGalleryPage">
     <!-- JavaScript will populate artwork entries here -->
@@ -96,98 +97,14 @@
 <div id="pageIndicator" class="pageStatus"></div>
 
 
+<script>
+    const artworkData = null;
+</script>
 
 
-Debug:<br/>
+<!-- Debug:<br/>
 
 ---- site.artgallery ----
-
-  <p>{
-  &quot;output&quot;: &quot;\n&quot;,
-  &quot;name&quot;: &quot;Artwork.md&quot;,
-  &quot;path&quot;: &quot;_artgallery/Artwork.md&quot;,
-  &quot;id&quot;: &quot;/artgallery/Artwork&quot;,
-  &quot;tags&quot;: [
-
-  ],
-  &quot;content&quot;: &quot;\n&quot;,
-  &quot;excerpt&quot;: &quot;\n&quot;,
-  &quot;title&quot;: &quot;Artwork Collection&quot;,
-  &quot;relative_path&quot;: &quot;_artgallery/Artwork.md&quot;,
-  &quot;date&quot;: &quot;2025-08-13 18:56:28 -0600&quot;,
-  &quot;url&quot;: &quot;/artgallery/Artwork.html&quot;,
-  &quot;categories&quot;: [
-
-  ],
-  &quot;collection&quot;: &quot;artgallery&quot;,
-  &quot;previous&quot;: null,
-  &quot;next&quot;: null,
-  &quot;draft&quot;: false,
-  &quot;entries&quot;: [
-    {
-      &quot;title&quot;: &quot;The Gift&quot;,
-      &quot;description&quot;: &quot;The last drop of clean water.&quot;,
-      &quot;image_url&quot;: &quot;/images/artgallery/TheGift.jpg&quot;,
-      &quot;date&quot;: &quot;2025-03-19&quot;
-    },
-    {
-      &quot;title&quot;: &quot;Dad&apos;s Last Birthday Card&quot;,
-      &quot;description&quot;: &quot;He always wanted to be a general....&quot;,
-      &quot;image_url&quot;: &quot;/images/artgallery/FinalBirthdayCardDad.png&quot;,
-      &quot;date&quot;: &quot;2025-03-20&quot;
-    },
-    {
-      &quot;title&quot;: &quot;Tic Tac UFO Closeup&quot;,
-      &quot;description&quot;: &quot;Is it Live or is it Memorex?&quot;,
-      &quot;image_url&quot;: &quot;/images/artgallery/00001-4284695226.png&quot;,
-      &quot;date&quot;: &quot;2025-03-21&quot;
-    },
-    {
-      &quot;title&quot;: &quot;The Queen of Egypt&quot;,
-      &quot;description&quot;: &quot;Fashion For Female Archeologists&quot;,
-      &quot;image_url&quot;: &quot;/images/artgallery/00049-1927857730.png&quot;,
-      &quot;date&quot;: &quot;2025-03-21&quot;
-    },
-    {
-      &quot;title&quot;: &quot;Explorer of The Future Timelines.&quot;,
-      &quot;description&quot;: &quot;Nice STEMs ;)&quot;,
-      &quot;image_url&quot;: &quot;/images/artgallery/00011-1927857730.png&quot;,
-      &quot;date&quot;: &quot;2025-03-21&quot;
-    },
-    {
-      &quot;title&quot;: &quot;The Living Legend&quot;,
-      &quot;description&quot;: &quot;The other king of rock and roll.&quot;,
-      &quot;image_url&quot;: &quot;/images/artgallery/00059-39.png&quot;,
-      &quot;date&quot;: &quot;2025-03-21&quot;
-    },
-    {
-      &quot;title&quot;: &quot;The Engineer&quot;,
-      &quot;description&quot;: &quot;And her obsession with snakes....&quot;,
-      &quot;image_url&quot;: &quot;/images/artgallery/00330-4068716746.png&quot;,
-      &quot;date&quot;: &quot;2025-03-21&quot;
-    },
-    {
-      &quot;title&quot;: &quot;The Engineer&apos;s Creation&quot;,
-      &quot;description&quot;: &quot;Only a face only a mother could love ....&quot;,
-      &quot;image_url&quot;: &quot;/images/artgallery/00066-882105811.png&quot;,
-      &quot;date&quot;: &quot;2025-03-21&quot;
-    },
-    {
-      &quot;title&quot;: &quot;The Legend of Kali&quot;,
-      &quot;description&quot;: &quot;Kali, the Goddess Defender of the Jungle.&quot;,
-      &quot;image_url&quot;: &quot;/images/artgallery/00059-2057975752.png&quot;,
-      &quot;date&quot;: &quot;2025-03-21&quot;
-    },
-    {
-      &quot;title&quot;: &quot;The Wrath of Kali&quot;,
-      &quot;description&quot;: &quot;Time to Stomp Evil.&quot;,
-      &quot;image_url&quot;: &quot;/images/artgallery/00252-300216233.png&quot;,
-      &quot;date&quot;: &quot;2025-03-21&quot;
-    }
-  ],
-  &quot;slug&quot;: &quot;Artwork&quot;,
-  &quot;ext&quot;: &quot;.md&quot;
-}</p>
 
 
 ---------------------------------- <br />
@@ -196,163 +113,35 @@ Artworks Object: <br />
 
 
 
-  
-    
-    <p>Title: The Gift</p>
-    <p>Date: 2025-03-19</p>
-    <p>Description: The last drop of clean water.</p>
-    <p>Image URL: /images/artgallery/TheGift.jpg</p>
-  
-    <p>Title: Dad's Last Birthday Card</p>
-    <p>Date: 2025-03-20</p>
-    <p>Description: He always wanted to be a general....</p>
-    <p>Image URL: /images/artgallery/FinalBirthdayCardDad.png</p>
-  
-    <p>Title: Tic Tac UFO Closeup</p>
-    <p>Date: 2025-03-21</p>
-    <p>Description: Is it Live or is it Memorex?</p>
-    <p>Image URL: /images/artgallery/00001-4284695226.png</p>
-  
-    <p>Title: The Queen of Egypt</p>
-    <p>Date: 2025-03-21</p>
-    <p>Description: Fashion For Female Archeologists</p>
-    <p>Image URL: /images/artgallery/00049-1927857730.png</p>
-  
-    <p>Title: Explorer of The Future Timelines.</p>
-    <p>Date: 2025-03-21</p>
-    <p>Description: Nice STEMs ;)</p>
-    <p>Image URL: /images/artgallery/00011-1927857730.png</p>
-  
-    <p>Title: The Living Legend</p>
-    <p>Date: 2025-03-21</p>
-    <p>Description: The other king of rock and roll.</p>
-    <p>Image URL: /images/artgallery/00059-39.png</p>
-  
-    <p>Title: The Engineer</p>
-    <p>Date: 2025-03-21</p>
-    <p>Description: And her obsession with snakes....</p>
-    <p>Image URL: /images/artgallery/00330-4068716746.png</p>
-  
-    <p>Title: The Engineer's Creation</p>
-    <p>Date: 2025-03-21</p>
-    <p>Description: Only a face only a mother could love ....</p>
-    <p>Image URL: /images/artgallery/00066-882105811.png</p>
-  
-    <p>Title: The Legend of Kali</p>
-    <p>Date: 2025-03-21</p>
-    <p>Description: Kali, the Goddess Defender of the Jungle.</p>
-    <p>Image URL: /images/artgallery/00059-2057975752.png</p>
-  
-    <p>Title: The Wrath of Kali</p>
-    <p>Date: 2025-03-21</p>
-    <p>Description: Time to Stomp Evil.</p>
-    <p>Image URL: /images/artgallery/00252-300216233.png</p>
-  
-  
-
 
 ---------------------------------- <br />
----------------------------------- <br />
-
-<script>
-    const artworkData = [{"output":"\n","name":"Artwork.md","path":"_artgallery/Artwork.md","id":"/artgallery/Artwork","tags":[],"content":"\n","excerpt":"\n","title":"Artwork Collection","relative_path":"_artgallery/Artwork.md","date":"2025-08-13 18:56:28 -0600","url":"/artgallery/Artwork.html","categories":[],"collection":"artgallery","previous":null,"next":null,"draft":false,"entries":[{"title":"The Gift","description":"The last drop of clean water.","image_url":"/images/artgallery/TheGift.jpg","date":"2025-03-19"},{"title":"Dad's Last Birthday Card","description":"He always wanted to be a general....","image_url":"/images/artgallery/FinalBirthdayCardDad.png","date":"2025-03-20"},{"title":"Tic Tac UFO Closeup","description":"Is it Live or is it Memorex?","image_url":"/images/artgallery/00001-4284695226.png","date":"2025-03-21"},{"title":"The Queen of Egypt","description":"Fashion For Female Archeologists","image_url":"/images/artgallery/00049-1927857730.png","date":"2025-03-21"},{"title":"Explorer of The Future Timelines.","description":"Nice STEMs ;)","image_url":"/images/artgallery/00011-1927857730.png","date":"2025-03-21"},{"title":"The Living Legend","description":"The other king of rock and roll.","image_url":"/images/artgallery/00059-39.png","date":"2025-03-21"},{"title":"The Engineer","description":"And her obsession with snakes....","image_url":"/images/artgallery/00330-4068716746.png","date":"2025-03-21"},{"title":"The Engineer's Creation","description":"Only a face only a mother could love ....","image_url":"/images/artgallery/00066-882105811.png","date":"2025-03-21"},{"title":"The Legend of Kali","description":"Kali, the Goddess Defender of the Jungle.","image_url":"/images/artgallery/00059-2057975752.png","date":"2025-03-21"},{"title":"The Wrath of Kali","description":"Time to Stomp Evil.","image_url":"/images/artgallery/00252-300216233.png","date":"2025-03-21"}],"slug":"Artwork","ext":".md"}];
-</script>
-
-
-
-<!-- <script>
-const artworkData = [{"output":"\n","name":"Artwork.md","path":"_artgallery/Artwork.md","id":"/artgallery/Artwork","tags":[],"content":"\n","excerpt":"\n","title":"Artwork Collection","relative_path":"_artgallery/Artwork.md","date":"2025-08-13 18:56:28 -0600","url":"/artgallery/Artwork.html","categories":[],"collection":"artgallery","previous":null,"next":null,"draft":false,"entries":[{"title":"The Gift","description":"The last drop of clean water.","image_url":"/images/artgallery/TheGift.jpg","date":"2025-03-19"},{"title":"Dad's Last Birthday Card","description":"He always wanted to be a general....","image_url":"/images/artgallery/FinalBirthdayCardDad.png","date":"2025-03-20"},{"title":"Tic Tac UFO Closeup","description":"Is it Live or is it Memorex?","image_url":"/images/artgallery/00001-4284695226.png","date":"2025-03-21"},{"title":"The Queen of Egypt","description":"Fashion For Female Archeologists","image_url":"/images/artgallery/00049-1927857730.png","date":"2025-03-21"},{"title":"Explorer of The Future Timelines.","description":"Nice STEMs ;)","image_url":"/images/artgallery/00011-1927857730.png","date":"2025-03-21"},{"title":"The Living Legend","description":"The other king of rock and roll.","image_url":"/images/artgallery/00059-39.png","date":"2025-03-21"},{"title":"The Engineer","description":"And her obsession with snakes....","image_url":"/images/artgallery/00330-4068716746.png","date":"2025-03-21"},{"title":"The Engineer's Creation","description":"Only a face only a mother could love ....","image_url":"/images/artgallery/00066-882105811.png","date":"2025-03-21"},{"title":"The Legend of Kali","description":"Kali, the Goddess Defender of the Jungle.","image_url":"/images/artgallery/00059-2057975752.png","date":"2025-03-21"},{"title":"The Wrath of Kali","description":"Time to Stomp Evil.","image_url":"/images/artgallery/00252-300216233.png","date":"2025-03-21"}],"slug":"Artwork","ext":".md"}];
-const gallery = document.getElementById("art-gallery");
-
-artworkData.forEach(art => {
-  if (art.entries && art.entries.length > 0) {
-    art.entries.forEach(entry => {
-      const artDiv = document.createElement("div");
-      artDiv.classList.add("art-item");
-
-      artDiv.innerHTML = `
-        <h2>${entry.title}</h2>
-        <img src="${entry.image_url}" alt="${entry.title}" />
-        <p>${entry.description}</p>
-      `;
-
-      gallery.appendChild(artDiv);
-    });
-  } else {
-    console.warn("No entries found for:", art.title);
-  }
-});
-</script> -->
-
-<!-- <script>
-  const artworkData = [{"output":"\n","name":"Artwork.md","path":"_artgallery/Artwork.md","id":"/artgallery/Artwork","tags":[],"content":"\n","excerpt":"\n","title":"Artwork Collection","relative_path":"_artgallery/Artwork.md","date":"2025-08-13 18:56:28 -0600","url":"/artgallery/Artwork.html","categories":[],"collection":"artgallery","previous":null,"next":null,"draft":false,"entries":[{"title":"The Gift","description":"The last drop of clean water.","image_url":"/images/artgallery/TheGift.jpg","date":"2025-03-19"},{"title":"Dad's Last Birthday Card","description":"He always wanted to be a general....","image_url":"/images/artgallery/FinalBirthdayCardDad.png","date":"2025-03-20"},{"title":"Tic Tac UFO Closeup","description":"Is it Live or is it Memorex?","image_url":"/images/artgallery/00001-4284695226.png","date":"2025-03-21"},{"title":"The Queen of Egypt","description":"Fashion For Female Archeologists","image_url":"/images/artgallery/00049-1927857730.png","date":"2025-03-21"},{"title":"Explorer of The Future Timelines.","description":"Nice STEMs ;)","image_url":"/images/artgallery/00011-1927857730.png","date":"2025-03-21"},{"title":"The Living Legend","description":"The other king of rock and roll.","image_url":"/images/artgallery/00059-39.png","date":"2025-03-21"},{"title":"The Engineer","description":"And her obsession with snakes....","image_url":"/images/artgallery/00330-4068716746.png","date":"2025-03-21"},{"title":"The Engineer's Creation","description":"Only a face only a mother could love ....","image_url":"/images/artgallery/00066-882105811.png","date":"2025-03-21"},{"title":"The Legend of Kali","description":"Kali, the Goddess Defender of the Jungle.","image_url":"/images/artgallery/00059-2057975752.png","date":"2025-03-21"},{"title":"The Wrath of Kali","description":"Time to Stomp Evil.","image_url":"/images/artgallery/00252-300216233.png","date":"2025-03-21"}],"slug":"Artwork","ext":".md"}];
-  const gallery = document.getElementById("art-gallery");
-
-artworkData.forEach(art => {
-  if (art.entries && art.entries.length > 0) {
-    art.entries.forEach(entry => {
-      const artDiv = document.createElement("div");
-      artDiv.classList.add("artworkDisplay"); // Ensure correct styling
-
-      artDiv.innerHTML = `
-        <div class="artworkTitle">${entry.title}</div>
-        <a href="${entry.image_url}" data-lightbox="gallery" data-title="${entry.title}">
-          <img src="${entry.image_url}" alt="${entry.title}">
-        </a>
-        <div class="artworkOverlay">${entry.description}</div>
-      `;
-
-      gallery.appendChild(artDiv);
-    });
-  } else {
-    console.warn("No entries found for:", art.title);
-  }
-});
-  // Debugging output
-  console.log("Artwork data loaded:", artworkData);
-  console.log("Gallery element:", gallery);
-</script> -->
+---------------------------------- <br /> -->
 
 
 
 
-<!-- <script>
-  const artworkData = [{"output":"\n","name":"Artwork.md","path":"_artgallery/Artwork.md","id":"/artgallery/Artwork","tags":[],"content":"\n","excerpt":"\n","title":"Artwork Collection","relative_path":"_artgallery/Artwork.md","date":"2025-08-13 18:56:28 -0600","url":"/artgallery/Artwork.html","categories":[],"collection":"artgallery","previous":null,"next":null,"draft":false,"entries":[{"title":"The Gift","description":"The last drop of clean water.","image_url":"/images/artgallery/TheGift.jpg","date":"2025-03-19"},{"title":"Dad's Last Birthday Card","description":"He always wanted to be a general....","image_url":"/images/artgallery/FinalBirthdayCardDad.png","date":"2025-03-20"},{"title":"Tic Tac UFO Closeup","description":"Is it Live or is it Memorex?","image_url":"/images/artgallery/00001-4284695226.png","date":"2025-03-21"},{"title":"The Queen of Egypt","description":"Fashion For Female Archeologists","image_url":"/images/artgallery/00049-1927857730.png","date":"2025-03-21"},{"title":"Explorer of The Future Timelines.","description":"Nice STEMs ;)","image_url":"/images/artgallery/00011-1927857730.png","date":"2025-03-21"},{"title":"The Living Legend","description":"The other king of rock and roll.","image_url":"/images/artgallery/00059-39.png","date":"2025-03-21"},{"title":"The Engineer","description":"And her obsession with snakes....","image_url":"/images/artgallery/00330-4068716746.png","date":"2025-03-21"},{"title":"The Engineer's Creation","description":"Only a face only a mother could love ....","image_url":"/images/artgallery/00066-882105811.png","date":"2025-03-21"},{"title":"The Legend of Kali","description":"Kali, the Goddess Defender of the Jungle.","image_url":"/images/artgallery/00059-2057975752.png","date":"2025-03-21"},{"title":"The Wrath of Kali","description":"Time to Stomp Evil.","image_url":"/images/artgallery/00252-300216233.png","date":"2025-03-21"}],"slug":"Artwork","ext":".md"}];
-  console.log(artworkData);
-
-  let item = document.getElementById("art-item");
-  console.log(item.dataset.title); // Pulls Liquid data into JS
-
-const gallery = document.getElementById("art-gallery");
-
-artworkData.forEach(art => {
-  const artDiv = document.createElement("div");
-  artDiv.classList.add("art-item");
-
-  artDiv.innerHTML = `
-    <h2>${art.title}</h2>
-    <img src="${art.image_url}" alt="${art.title}" />
-    <p>${art.description}</p>
-  `;
-
-  gallery.appendChild(artDiv);
-});
-</script> -->
 			
 
-			<div class="container contactInfo">
-				<div class="container contactText">
-					<a class="link-text text-link-1" href="#">Website: https://starfire-industries.github.io/<br></a>
-					<a class="link-text text-link-3" href="#">LinkedIn: https://www.linkedin.com/in/dscottgould/</a>
-				</div>
-				<a class="link-text text-link-2" href="#">eMail: gould.dscott@gmail.com<br></a>
-			</div>
-			<div class="container surrounding-padding-col-low footer-copyright">
-				<div class="container copyrightText">
-					<p class="paragraph footer-copyright-text">Site Created by Donald Scott Gould.<br>AsciiDoc, MarkDown and
-						HTML Markup Compatible.<br>Powered by Jekyll and Liquid. </p>
-				</div>
-			</div>
+			
+
+<div class="container contactInfo">
+    <div class="container contactText">
+        <a class="link-text text-link-1" href="https://starfire-industries.github.io/">Website: https://starfire-industries.github.io/<br></a>
+        <a class="link-text text-link-1" href="https://starfireindustriesai.slack.com/">Contact: https://starfireindustriesai.slack.com/<br></a>
+        <a class="link-text text-link-3" href="https://starfireindustries.bsky.social" target="_blank">BlueSky: starfireindustries.bsky.social<br></a>
+        <a class="link-text text-link-3" href="https://www.youtube.com/@GermanFAT8TrackRecords69" target="_blank">YouTube: https://www.youtube.com/@GermanFAT8TrackRecords69<br></a>
+        <a class="link-text text-link-3" href="https://www.patreon.com/c/German8TrackRecords" target="_blank">Patreon: https://www.patreon.com/c/German8TrackRecords<br></a>
+        <a class="link-text text-link-3" href="https://buymeacoffee.com/starfirezac" target="_blank">BuyMeCoffee: https://buymeacoffee.com/starfirezac<br></a>
+    </div>
+</div>
+<div class="container surrounding-padding-col-low footer-copyright">
+    <div class="container copyrightText">
+        <p class="paragraph footer-copyright-text">Site Created by Donald Scott Gould.<br>AsciiDoc, MarkDown and
+            HTML Markup Compatible.<br>Powered by Jekyll and Liquid. </p>
+    </div>
+</div>
+
+
 			<script src="/js/vendor/jquery.min.js"></script>
 			<script src="/js/vendor/outofview.js"></script>
 			<script src="/js/vendor/what-input.min.js"></script>

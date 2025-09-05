@@ -1,0 +1,13 @@
+- id: gallery01
+  title: "Stable Diffusion Artwork"
+  description: "Created by DS Gould"
+  page: "artgallery01.html"
+  cover_image: "artgallery/gallery01/TheGift.jpg"
+  tags: ["AI", "StableDiffusion", "mythic", "ConeS"]
+
+- id: gallery02
+  title: "DALL-e Concept Artwork"
+  description: "Done by MS Luna Spriral Houston"
+  page: "artgallery02.html"
+  cover_image: "artgallery/gallery02/BarbiePinkTank.png"
+  tags: ["DALL-e", "concept", "ritual", "goddess"]

@@ -25,16 +25,18 @@ title: Art Gallery
 
 
 <script>
-    const artworkData = {{ site.artgallery | jsonify }};
+    const artworkData = {{ site.artgallery01 | jsonify }};
 </script>
 
 
-<!-- Debug:<br/>
+Debug:<br/>
 
 ---- site.artgallery ----
-{% for entry in site.artgallery %}
+{% for entry in site.artgallery01 %}
   <p>{{ entry | inspect }}</p>
 {% endfor %}
+
+<!-- 
 
 ---------------------------------- <br />
 ---------------------------------- <br />

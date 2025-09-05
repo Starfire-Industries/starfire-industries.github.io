@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to core stuff -->
 			<meta charset="utf-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>{{page.title}}</title>
@@ -29,69 +27,16 @@
 			<!-- <link rel="stylesheet" href="/css/justifiedGallery.min.css" /> -->
 		</head>
 		<body>
-			<div class="container mainNavigation">
-				<div class="container button mobile-menu-toggle" data-toggle="view-menu">
-					<div class="rule menu-line">
-						<hr>
-					</div>
-					<div class="rule menu-line">
-						<hr>
-					</div>
-					<div class="rule menu-line">
-						<hr>
-					</div>
-				</div>
-				<div class="container menu-wrapper" data-toggler="show-menu" id="view-menu">
-					<a href="index.html" class="responsive-picture nav-logo">
-						<img alt="Starfire Industried Logo" src="/images/StarfireLogo.png">
-					</a>
-					<ul class="list-container menu">
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/index.html" data-toggle="view-menu">Home</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/artgallery/index.html" data-toggle="view-menu">Art Gallery</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/stories" data-toggle="view-menu">Stories</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/artgallery/index.html" data-toggle="view-menu">Products</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/comingsoon" data-toggle="view-menu">Services</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/comingsoon" data-toggle="view-menu">Projects</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/docs/" data-toggle="view-menu">Library</a>
-						</li>
-						<li class="list-item-container nav-wrapper">
-							<a class="link-text nav-item" href="/comingsoon" data-toggle="view-menu">About</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+			
+			{% include navigation.html %}
 
-
-			<!-- content -->			
+			
 			{{ content }}
 			
 
-			<div class="container contactInfo">
-				<div class="container contactText">
-					<a class="link-text text-link-1" href="#">Website: https://starfire-industries.github.io/<br></a>
-					<a class="link-text text-link-3" href="#">LinkedIn: https://www.linkedin.com/in/dscottgould/</a>
-				</div>
-				<a class="link-text text-link-2" href="#">eMail: gould.dscott@gmail.com<br></a>
-			</div>
-			<div class="container surrounding-padding-col-low footer-copyright">
-				<div class="container copyrightText">
-					<p class="paragraph footer-copyright-text">Site Created by Donald Scott Gould.<br>AsciiDoc, MarkDown and
-						HTML Markup Compatible.<br>Powered by Jekyll and Liquid. </p>
-				</div>
-			</div>
+			{% include footer.html %}
+
+
 			<script src="/js/vendor/jquery.min.js"></script>
 			<script src="/js/vendor/outofview.js"></script>
 			<script src="/js/vendor/what-input.min.js"></script>
