@@ -2042,3 +2042,42 @@ span.glyph {
   display: block; /* Ensures it behaves like a block element */
   border-radius: 8px; /* Adds a subtle rounded corner for aesthetics */
 }
+
+
+.galleryHome {
+ width: 100%;
+}
+
+
+.galleryCard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rem; /* wider shimmer spacing */
+  justify-content: center; /* or center */
+}
+
+.galleryCardImage {
+  width: 300px;
+  height: auto;
+  min-height: 500px; /* adjust as needed for balance */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #111;
+  color: #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.galleryCardImage img {
+  width: 100%;
+  height: 200px; /* or whatever fits your layout */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+
+
+
