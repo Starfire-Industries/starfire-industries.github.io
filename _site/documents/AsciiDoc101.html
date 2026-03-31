@@ -4,7 +4,7 @@
 			<meta charset="utf-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>AsciiDoc 101</title>
-			<meta name="description" content="Page Desc">
+			<meta name="description" content="The Atlas Jekyll Template is a leg-up in starting your own website hosted on GitHub with content based in AsciiDoc.">
 			<meta name="author" content="Your name goes here">
 			<meta name="copyright" content="Maybe consider a Creative Commons license">
 			
@@ -69,16 +69,114 @@
 					<a class="link-text nav-item" href="/docs/" data-toggle="view-menu">Library</a>
 				</li>
 				<li class="list-item-container nav-wrapper">
-					<a class="link-text nav-item" href="/comingsoon" data-toggle="view-menu">About</a>
+					<a href="/blog/">Forensics</a>
+				</li>
+				<li class="list-item-container nav-wrapper">
+					<a class="link-text nav-item" href="/about" data-toggle="view-menu">About</a>
 				</li>
 			</ul>
 		</div>
 	</div>
 </div>
 
-			
-			<h1>AsciiDoc 101</h1>
 
+
+			
+			<div id="preamble">
+<div class="sectionbody">
+<div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#overview">Overview</a></li>
+<li><a href="#core_configuration">Core Configuration</a></li>
+<li><a href="#transitioning_from_markdown">Transitioning from Markdown</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview">Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This module serves as the entry point for utilizing AsciiDoc within the Starfire Industries AI ecosystem. Unlike standard Markdown, AsciiDoc provides the semantic rigor required for complex AI engineering and forensic reporting.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="core_configuration">Core Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To ensure consistent rendering across the local "StarsEnd" server and the GitHub "Clean Burn" pipeline, the following attributes are initialized:</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Doctype
+</td>
+<td class="hdlist2">
+<p><code>book</code> - Enables multi-level sectioning and a formal structure.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Icons
+</td>
+<td class="hdlist2">
+<p><code>font</code> - Utilizes FontAwesome for technical admonitions (Notes, Warnings).</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+TOC
+</td>
+<td class="hdlist2">
+<p><code>macro</code> - Allows for precise placement of the Table of Contents.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="transitioning_from_markdown">Transitioning from Markdown</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>While the learning curve is steeper, the benefits for technical documentation are significant:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Admonition Blocks:</strong> Native support for <code>NOTE:</code>, <code>TIP:</code>, and <code>IMPORTANT:</code> visual callouts.</p>
+</li>
+<li>
+<p><strong>Tables:</strong> Advanced cell merging and formatting without raw HTML.</p>
+</li>
+<li>
+<p><strong>Includes:</strong> The ability to modularize documentation by pulling in external source code or sub-documents.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When you locate your legacy Jupyter installation notes (GDocs), they can be ported here as a sub-module. The conversion from Google Docs to AsciiDoc preserves technical nesting that Markdown typically flattens.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+<div class="paragraph">
+<p><em>Starfire Industries AI - Technical Documentation Division</em></p>
+</div>
+</div>
+</div>
 			
 
 			
@@ -98,6 +196,12 @@
         <p class="paragraph footer-copyright-text">Site Created by Donald Scott Gould.<br>AsciiDoc, MarkDown and
             HTML Markup Compatible.<br>Powered by Jekyll and Liquid. </p>
     </div>
+</div>
+
+<div class="footer-counter" style="margin-top: 20px; text-align: center;">
+  <a href="https://hits.seeyoufarm.com">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FStarfire-Industries%2Fstarfire-industries.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" alt="Hits"/>
+  </a>
 </div>
 
 

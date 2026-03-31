@@ -1,0 +1,34 @@
+---
+layout: default
+title: "The Engineer: Donald Scott Gould"
+description: "Foundational history from ARPANET to Starfire Industries AI."
+---
+
+= Mission Profile: Donald Scott Gould
+:icons: font
+
+[.lead]
+"The Kingdom of God is within man—not one man nor a group of men, but in all men! In you!"
+
+== The Technical Lineage
+My journey through the digital landscape isn't just professional; it’s historical. From early work within the **ARPANET** framework to the modern frontier of **AI Engineering** at Starfire Industries, the goal has remained constant: Data Sovereignty and the pursuit of Truth through technical precision.
+
+=== Core Competencies
+[square]
+* **AI Engineering:** Specialist in Generative AI, NFT Metadata extraction, and ComfyUI/LLM integration.
+* **Systems Architecture:** Hardened "Local Silo" deployment using Jekyll, AsciiDoc, and custom JS runtimes.
+* **Forensic Analysis:** Real-world conflict verification and infrastructure-proximity studies.
+
+== Active Operations
+Currently leading the **Nova Project**, a STEM-forward graphic novel for young adults, and developing the **Rainbow Bridge** gaming environment—a tribute to the literary foundations of Jack L. Chalker.
+
+== The Starfire Philosophy
+Starfire Industries AI is built on the "Clean Burn" principle. We utilize local rendering to bypass cloud-side leakage and maintain an immutable record of our creative and technical output.
+
+[quote, Donald Scott Gould]
+____
+We don't just build tools; we build digital Alamos for the truth.
+____
+
+'''
+_Sovereign Node 01 | Starfire Industries AI_

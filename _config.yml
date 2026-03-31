@@ -5,6 +5,10 @@ plugins:
   - jekyll-asciidoc
 # uncomment baseurl if you want to publish the site to a subfolder
 #baseurl: /blog
+
+url: "https://starfire-industries.github.io"
+baseurl: ""
+
 exclude:
 - LICENSE
 - README.adoc

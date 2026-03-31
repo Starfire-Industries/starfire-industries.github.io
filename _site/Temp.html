@@ -1,0 +1,82 @@
+
+
+
+{% for art in site.artgallery %}
+  <p>{{ art.entries }}</p>
+
+
+{% endfor %}
+
+{% for art in site.artgallery.entries %}
+  <p>{{ art.title }}</p>
+  <p>{{ art.description }}</p>
+  <p>{{ art.image_url }}</p>
+{% endfor %}
+
+<p>{{ site.artgallery.entries[0] | inspect }}</p>
+
+
+Count: {{ site.artgallery.entries.count }}
+
+
+layout: default
+
+<!-- <p>{{ site.artgallery.entries[0] | inspect }}</p> -->
+
+
+	<!-- <div class="art-gallery">
+		{% for art in site.artgallery %}
+			{% if art.entries %}
+		  		{% for entry in art.entries %}
+					<div class="art-piece">
+						<img src="{{ art.image_url }}" alt="{{ art.title }}">
+						<h3>{{ art.title }}</h3>
+						<p>{{ art.description }}</p>
+					</div>
+			{	% endfor %}
+			{% else %}
+				<p>No entries found in this file</p>
+			{% endif %}
+		{% endfor %}
+	</div> -->
+  
+  ---
+  ---
+  title: Artwork
+  entries:
+  - title: "Buffalo Apple Pie"
+    description: "Calling all public lands loving bakers! Show your support this Pi Day (Friday 3.14) in the form of Ranger Resistance pies 🥧!"
+    image_url: "/images/artgallery/ApplePie.jpg"
+    date: "2025-03-19"
+  - title: "Rocky Mountain Scones"
+    description: "Enjoy these golden treats inspired by the rugged charm of Colorado's Rockies!"
+    image_url: "/images/artgallery/Card01.jpg"
+    date: "2025-03-20"
+  - title: "Trail Mix Cookies"
+    description: "Perfect snack for explorers! Packed with nuts, chocolate, and oats for the journey."
+    image_url: "/images/artgallery/Card02.jpg"
+    date: "2025-03-21"
+  ---
+
+
+  <h1>{{ page.title }}</h1>
+
+<ul class="documents">
+  <li>Resistance Rangers's Documents</li>
+  {% for entry in site.pdfs %}
+    {% for pdf in entry.entries %}
+      <li>
+        <a href="{{ pdf.url }}" target="_blank" rel="noopener noreferrer">{{ pdf.title }}</a>
+      </li>
+    {% endfor %}
+  {% endfor %}
+
+  <li>ASCIIDoc School</li>
+  {% for doc in site.documents %}
+    <li>
+      <a href="{{ doc.url }}" target="_blank" title="{{ doc.title }}">{{ doc.title }}</a>
+      <br>
+      <span>Date Created: {{ doc.date | date_to_string }}</span>
+    </li>
+  {% endfor %}
+</ul>
