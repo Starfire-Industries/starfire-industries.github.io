@@ -2115,4 +2115,29 @@ span.glyph {
 
 
 
+/* --- Starfire Custom Enhancements --- */
+
+.productTextOverlay {
+    background-color: rgba(0, 0, 0, 0.75); /* 75% opacity for maximum legibility */
+    padding: 30px 40px;
+    border-radius: 4px;
+    border-left: 3px solid #e2a884; /* Inherits your primary accent color */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6); 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* --- Starfire Structural Enhancements --- */
+
+.productSectionWrapper {
+    min-height: 70vh; /* Forces the section open to reveal the background art */
+    padding-top: 6rem; /* Ensures the dark text box never touches the top edge */
+    padding-bottom: 6rem; /* Ensures the dark text box never touches the bottom edge */
+    width: 100%;
+    display: flex;
+    align-items: center; /* Vertically centers the text box over the artwork */
+}
+
+
+
 
